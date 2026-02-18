@@ -3,18 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SB News</title>
-</head>
-<body>
-    <h1>Bem-vindo ao SB News</h1>
-    <p>Este é o seu site de notícias. Aqui você vai encontrar as últimas atualizações e informações da equipe.</p>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login SB News</title>
 </head>
 <body>
@@ -26,34 +14,40 @@
         <label for="password">Senha:</label>
         <input type="password" id="password" required>
         <br><br>
-        <button type="submit">
-const usuarios = {
-    '928672': '123a',
-    '502644': '123a',
-    '350977': '123a',
-    '300831': '123a',
-    '441806': '123a',
-    '252747': '123a',
-    '873249': '123a',
-    '590531': '123a',
-    '847913': '123a'
-};
+        <button type="submit">Entrar</button>
+    </form>
 
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Evita o envio padrão
-    const user = document.getElementById('user').value;
-    const pass = document.getElementById('password').value;
+    <script>
+        const usuarios = {
+            '928672': '123a',
+            '502644': '123a',
+            '350977': '123a',
+            '300831': '123a',
+            '441806': '123a',
+            '252747': '123a',
+            '873249': '123a',
+            '590531': '123a',
+            '847913': '123a'
+        };
 
-    if (usuarios[user] && usuarios[user] === pass) {
-        if (user === '928672') {
-            window.location.href = 'coordenacao.html';
-        } else if (user === '502644') {
-            window.location.href = 'producao.html';
-        } else {
-            // Para outras matrículas, você pode definir outras rotas ou uma página padrão
-            window.location.href = 'area-geral.html';
-        }
-    } else {
-        alert('Usuário ou senha inválidos');
-    }
-});
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita o envio padrão
+            const user = document.getElementById('user').value;
+            const pass = document.getElementById('password').value;
+
+            if (usuarios[user] && usuarios[user] === pass) {
+                if (user === '928672') {
+                    window.location.href = 'coordenacao.html';
+                } else if (user === '502644') {
+                    window.location.href = 'producao.html';
+                } else {
+                    // Para outras matrículas, uma página padrão
+                    window.location.href = 'area-geral.html';
+                }
+            } else {
+                alert('Usuário ou senha inválidos');
+            }
+        });
+    </script>
+</body>
+</html>
