@@ -34,7 +34,7 @@
             e.preventDefault(); // Evita o envio padrão
             const user = document.getElementById('user').value;
             const pass = document.getElementById('password').value;
-
+console.log('Usuário:', user, 'Senha:', pass);
             if (usuarios[user] && usuarios[user] === pass) {
                 if (user === '928672') {
                     window.location.href = 'coordenacao.html';
