@@ -27,3 +27,33 @@
         <input type="password" id="password" required>
         <br><br>
         <button type="submit">
+const usuarios = {
+    '928672': '123a',
+    '502644': '123a',
+    '350977': '123a',
+    '300831': '123a',
+    '441806': '123a',
+    '252747': '123a',
+    '873249': '123a',
+    '590531': '123a',
+    '847913': '123a'
+};
+
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Evita o envio padrão
+    const user = document.getElementById('user').value;
+    const pass = document.getElementById('password').value;
+
+    if (usuarios[user] && usuarios[user] === pass) {
+        if (user === '928672') {
+            window.location.href = 'coordenacao.html';
+        } else if (user === '502644') {
+            window.location.href = 'producao.html';
+        } else {
+            // Para outras matrículas, você pode definir outras rotas ou uma página padrão
+            window.location.href = 'area-geral.html';
+        }
+    } else {
+        alert('Usuário ou senha inválidos');
+    }
+});
